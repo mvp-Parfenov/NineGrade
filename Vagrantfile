@@ -8,9 +8,10 @@ end
 
 domains = {
   frontend: 'shop.dev',
-  backend:  'backend.shop.dev'
+  backend:  'backend.shop.dev',
+  api:      'api.shop.dev',
+  static:   'static.shop.dev'
 }
-
 config = {
   local: './vagrant/config/vagrant-local.yml',
   example: './vagrant/config/vagrant-local.example.yml'
@@ -73,5 +74,5 @@ Vagrant.configure(2) do |config|
   config.vm.provision 'shell', path: './vagrant/provision/always-as-root.sh', run: 'always'
 
   # post-install message (vagrant console)
-  config.vm.post_up_message = "Frontend URL: http://#{domains[:frontend]}\nBackend URL: http://#{domains[:backend]}"
+  config.vm.post_up_message = "Frontend URL: http://#{domains[:frontend]}\nBackend URL: http://#{domains[:backend]}\nAPI URL: http://#{domains[:api]}\nStatic URL: http://#{domains[:static]}"
 end
