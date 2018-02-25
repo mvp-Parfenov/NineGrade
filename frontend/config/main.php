@@ -22,7 +22,6 @@ return [
             'identityCookie' => [
                 'name' => '_identity',
                 'httpOnly' => true,
-                'domain' => $params['cookieDomain']
             ],
         ],
         'session' => [

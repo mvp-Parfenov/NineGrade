@@ -23,7 +23,6 @@ return [
             'identityCookie' => [
                 'name' => '_identity',
                 'httpOnly' => true,
-                'domain' => $params['cookieDomain']
             ],
         ],
         'session' => [
@@ -42,7 +41,7 @@ return [
         'errorHandler' => [
             'errorAction' => 'site/error',
         ],
-        'backendurlManager' => require __DIR__ . '/urlManager.php',
+        'backendUrlManager' => require __DIR__ . '/urlManager.php',
         'frontendUrlManager' => require __DIR__ . '/../../frontend/config/urlManager.php',
         'urlManager' => function () {
             return Yii::$app->get('backendUrlManager');
