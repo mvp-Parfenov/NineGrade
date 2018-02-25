@@ -21,7 +21,7 @@ debconf-set-selections <<< "mysql-community-server mysql-community-server/re-roo
 echo "Done!"
 
 info "Add PHP 7.1 repository"
-add-apt-repository ppa:onderej/php -y
+add-apt-repository ppa:ondrej/php -y
 
 info "Update OS software"
 apt-get update

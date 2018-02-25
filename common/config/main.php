@@ -8,6 +8,8 @@ return [
     'components' => [
         'cache' => [
             'class' => 'yii\caching\FileCache',
+            // set cache in one folder
+            'cachePath' => '@common/runtime/cache'
         ],
     ],
 ];
